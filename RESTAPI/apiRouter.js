@@ -2,6 +2,7 @@
 const express = require('express');//express o zouz enfes
 var userCtrl= require('./routes/userController');
 var messageCtrl= require('./routes/messageController');
+var likeCtrl= require('./routes/likeController');
 
 //routes
 
@@ -16,6 +17,9 @@ exports.router=(//object
    //messages routes
         apiRouter.route('/messages/new/').post(messageCtrl.createMessage);
         apiRouter.route('/messages/').get(messageCtrl.listMessages);
+        //like routes
+        apiRouter.route('/messages/:messageId/like/').post(likeCtrl.likePost);
+        apiRouter.route('/messages/:messageId/dislike/').post(likeCtrl.dislikePost);
     
       
         return apiRouter;

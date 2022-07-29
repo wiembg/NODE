@@ -16,17 +16,17 @@ module.exports = {
       // Params
       var messageId = parseInt(req.params.messageId);
   
-      if (messageId <= 0) {
+      if (messageId <= 0) {//si l'id valide ou non 
         return res.status(400).json({ 'error': 'invalid parameters' });
       }
   
-      asyncLib.waterfall([
+      asyncLib.waterfall([//waterfull si vrai ytaba3 waterfull sinon ytaba3 callback function
         function(done) {
           models.Message.findOne({
             where: { id: messageId }
           })
           .then(function(messageFound) {
-            done(null, messageFound);
+            done(null, messageFound);//send messageFound to next function en tant que parametre
           })
           .catch(function(err) {
             return res.status(500).json({ 'error': 'unable to verify message' });
