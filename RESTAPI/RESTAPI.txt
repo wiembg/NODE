@@ -25,4 +25,17 @@ root
 create database database_development_retro;
 create database database_test_retro;
 //lezm nafs lpass lelkol
+sequelize db:migrate
+reverse engineering
 --------
+JWT
+creer gerer notre token :
+en-tete:algorithme de chiffrement,type de token
+donnée:payload(donnée+champs réservés)
+signature:signature (validité du token)
+body-parser=middleware, which will transform raw request body into usable format
+---
+Router.use() requires a middleware function but got a undefined error=> should export router
+---
+use database_development_retro
+select * from Users;
