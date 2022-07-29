@@ -18,7 +18,7 @@ exports.router=(//object
         apiRouter.route('/messages/new/').post(messageCtrl.createMessage);
         apiRouter.route('/messages/').get(messageCtrl.listMessages);
         //like routes
-        apiRouter.route('/messages/:messageId/like/').post(likeCtrl.likePost);
+        apiRouter.route('/messages/:messageId/like/').post(likeCtrl.likePost);//:nom de parametre
         apiRouter.route('/messages/:messageId/dislike/').post(likeCtrl.dislikePost);
     
       

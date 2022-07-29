@@ -181,7 +181,7 @@ module.exports = {
               res.status(500).json({ 'error': 'cannot update user reaction' });
             });
           } else {
-            res.status(409).json({ 'error': 'message already disliked' });
+            res.status(409).json({ 'error': 'message already disliked' });//si le meme user decide de disliker encore
           }
         }
        },
