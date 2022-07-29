@@ -1,0 +1,28 @@
+working with my SQL ,workbench SQL
+Design base de donnée :
+table1:messages ,table2:users
+relation:1-N 
+ORM:Object Relational Mapping outil permet de creer un ensemble des classes qui vont représenter des objets
+dans le but de pouvoir les manipuler (ajout,suppression,mise a jour)en connectant au BD my SQL
+    steps:
+npm i -g sequelize-cli
+npm i --save sequelize@3.30.4
+npm i -g sequelize-cli     
+sequelize init
+    creation d'un model class:user
+sequelize model:create --attributes "email:string username:string password:string bio:string isAdmin:boolean" --name User
+    creation d'un model class:message
+sequelize model:create --attributes "idUSERS:integer title:string content:string  attachement:string likes:integer" --name Message
+-------
+ j'utilise MAMP pour tester API
+ apres initiation du port 8888
+ http://localhost:8888/
+ Server name: localhost
+Document root: C:/MAMP/htdocs
+C:\MAMP\htdocs
+λ mysql -u root -p
+root
+create database database_development_retro;
+create database database_test_retro;
+//lezm nafs lpass lelkol
+--------

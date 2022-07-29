@@ -1,3 +1,4 @@
+SSL:file allow end-users to check if they ar in a secure website
 SSL certif generation
 1-generate a private key
 2-create a csr(certificate signing request)

@@ -10,13 +10,25 @@ router.get('/',(req,res)=>{
 //
 // Get single user
 router.get('/:id',(req,res)=>{
+/*     const id = req.params.id;
+    for(let user in users){
+   if(user.id===id){
+
+    res.json(user);
+
+    }
+    }
+    res.status(400).json({msg:`No user with the id of ${id}`});
+}
+); */
+
 const found=users.some(user=>user.id===parseInt(req.params.id));
 if(found){
     res.json(users.filter(user=>user.id===parseInt(req.params.id)));
 }else{
     res.status(400).json({msg:`No user with the id of ${req.params.id}`});
 }
-})
+}) 
 //create user
 router.post('/',(req,res)=>{
 
