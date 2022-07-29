@@ -14,7 +14,7 @@ sequelize model:create --attributes "email:string username:string password:strin
     creation d'un model class:message
 sequelize model:create --attributes "idUSERS:integer title:string content:string  attachement:string likes:integer" --name Message
 -------
- j'utilise MAMP pour tester API
+ j'utilise MAMP pour tester API :server mysql
  apres initiation du port 8888
  http://localhost:8888/
  Server name: localhost
@@ -39,3 +39,7 @@ Router.use() requires a middleware function but got a undefined error=> should e
 ---
 use database_development_retro
 select * from Users;
+-----
+sequelize db:drop
+sequelize db:create
+sequelize db:migrate
